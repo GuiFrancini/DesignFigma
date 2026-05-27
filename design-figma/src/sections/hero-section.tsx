@@ -8,7 +8,7 @@ export function HeroSection() {
      <section className="relative flex flex-col items-center pt-16 md:pt-24 pb-0 overflow-hidden">
        
         <h1
-          className="mb-16 max-w-5xl text-center text-6xl md:text-[8rem] font-medium leading-nome tracking-tight text-black">
+          className="mb-16 max-w-5xl text-center text-6xl md:text-[8rem] font-serif leading-nome tracking-tight text-black">
           Browse everything.
         </h1>
 
@@ -19,14 +19,14 @@ export function HeroSection() {
               <img
                  src={Ipad}
                  alt="Hero desktop"
-                 className="hidden w-full object-contain drop-shadow-2xl md:block"
-          />
+                 className="hidden w-full object-contain
+                  drop-shadow-2xl md:block"/>
 
               <img
                  src={Iphone}
                  alt="Hero mobile"
-                 className="block w-full object-contain drop-shadow-2xl md:hidden"
-          />
+                 className="block w-full object-contain 
+                 drop-shadow-2xl md:hidden"/>
         </div>
       </div>
     </section>
