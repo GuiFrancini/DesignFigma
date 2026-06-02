@@ -5,6 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+ 
+  --branco: #ffffff;
+  --cinza-escuro: #929292;
+  --cinza-claro: #E9E9E9;
+  --preto: #000000;
+  --verde-musgo: #DFECC6;
+  --cinza-oliva: #8E9C78;
+  --verde-oliva: #485C11;
+ 
+  
+  /*shadcn */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+}
+
+@layer base {
   * {
     @apply border-zinc-200;
   }
@@ -14,3 +31,7 @@
   html {
     @apply font-sans;
   }
+  html {
+    @apply font-sans scroll-smooth; 
+  }
+}
