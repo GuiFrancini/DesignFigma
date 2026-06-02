@@ -21,50 +21,58 @@ export function BigPictureSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-6">
-      {/* Contêiner Principal - Max Width 1600px */}
-      <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center gap-[20px] border-b border-[#E9E9E9] lg:flex-row lg:justify-between lg:gap-[40px] xl:gap-[80px]">
+    <section className="w-full bg-branco px-10 py-16 md:py-24">
+      {/* conteiner principal 1600px */}
+      <div className="mx-auto flex max-w-7xl flex-col 
+      items-center justify-beteween gap-10 lg:flex-row lg:gap-16">
         
-        {/* Div do Texto */}
-        <div className="flex w-full max-w-[590px] flex-col gap-[40px] pb-[80px] pt-[60px]">
+        {/* conteiner do texto */}
+        <div className="flex w-full max-w-[590px] flex-col 
+        gap-10">
           
-          {/* Div do Título e Subtítulo */}
+          {/* div do titulo e sub */}
           <div className="flex w-full flex-col gap-6 lg:pr-[80px]">
-            <h2 className="font-serif text-[3.5rem] font-medium leading-tight tracking-tight text-black">
+            <h2 className="font-serif text-5xl font-medium 
+            leading-[115%] tracking-tight text-preto">
               See the Big Picture
             </h2>
-            <p className="text-base leading-relaxed text-[#929292]">
+            <p className="text-base leading-relaxed text-cinza-escuro">
               Area turns your data into clear, vibrant visuals that show you exactly
               what's happening in each region.
             </p>
           </div>
 
-          {/* Div dos Tópicos 01 a 04 */}
-          <div className="flex w-full flex-col border-b border-[#E9E9E9]">
+          {/* Div dos topicos 1 a 4 */}
+          <div className="flex w-full flex-col border-b-[0.5px]border-cinza-claro/60">
             {topics.map((topic, index) => (
               <div 
                 key={index} 
-                className="flex items-start gap-6 border-t border-[#E9E9E9] py-5"
+                className="flex items-start gap-6 border-t border-cinza-claro py-5"
               >
-                <span className="mt-0.5 text-sm font-medium text-[#929292]">
+                <span className="mt-0.5 text-sm font-medium text-cinza-escuro">
                   {topic.id}
                 </span>
-                <p className="text-sm leading-relaxed text-black">
+                <p className="text-sm leading-relaxed text-preto">
                   {topic.text}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Botão Discover */}
-          <button className="flex h-[48px] w-[138px] items-center justify-center rounded-full bg-[#DFECC6] px-[22px] py-[14px] text-sm font-semibold text-black transition hover:bg-[#cbe3a1]">
-            Discover More
-          </button>
-          
+          {/* button discover */}
+          <button className="flex h-[48px] w-[138px] items-center justify-center rounded-full 
+            bg-verde-musgo text-preto font-sans text-sm font-semibold transition-all duration-300 
+            hover:bg-cinza-oliva hover:text-branco shadow-none border-none">
+            <span className="whitespace-nowrap">
+              Discover More
+             </span>           
+          </button>         
         </div>
 
-        {/* Div da Imagem (Card) */}
-        <div className="h-[711px] w-full max-w-[590px] shrink-0 overflow-hidden rounded-[40px] bg-[#E9E9E9]">
+        {/* div da imagem ao lado */}
+        <div className="w-full max-w-[590px] aspect-[4/5]
+         md:aspect-square lg:h-[640px] shrink-0
+         overflow-hidden rounded-[40px] bg-cinza-claro">
           <img
             src={cilindrosRose}
             alt="Geometric shapes composition"
