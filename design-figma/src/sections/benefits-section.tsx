@@ -1,28 +1,31 @@
 import MontanhaBarro from "@/assets/images/montanhaBarro.avif";
-import { Cable, Globe, UserPlus, TrendingUp } from "lucide-react";
+import CableIcon from "@/assets/icons/cable-icon.svg";
+import EarthIcon from "@/assets/icons/earth-icon.svg";
+import AccountIcon from "@/assets/icons/account-icon.svg";
+import ChartIcon from "@/assets/icons/chart-icon.svg";
 
 export function BenefitsSection() {
   const features = [
     {
-      icon: <Cable className="h-6 w-6 text-black" strokeWidth={1.5} />,
+      icon: CableIcon,
       title: "Amplify Insights",
       description:
         "Unlock data-driven decisions with comprehensive analytics, revealing key opportunities for strategic regional growth.",
     },
     {
-      icon: <Globe className="h-6 w-6 text-black" strokeWidth={1.5} />,
+      icon: EarthIcon,
       title: "Control Your Global Presence",
       description:
         "Manage and track satellite offices, ensuring consistent performance and streamlined operations everywhere.",
     },
     {
-      icon: <UserPlus className="h-6 w-6 text-black" strokeWidth={1.5} />,
+      icon: AccountIcon,
       title: "Remove Language Barriers",
       description:
         "Adapt to diverse markets with built-in localization for clear communication and enhanced user experience.",
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-black" strokeWidth={1.5} />,
+      icon: ChartIcon,
       title: "Visualize Growth",
       description:
         "Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.",
@@ -30,41 +33,45 @@ export function BenefitsSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-20">
+    <section id="benefits" className="w-full bg-branco px-6 py-20">
       <div className="mx-auto max-w-7xl">
         
-        {/* Cabeçalho da Seção */}
+        {/* cabeçalho palavra titulo e subtitulo */}
         <div className="mb-20 max-w-3xl">
-          <p className="mb-6 font-mono text-sm font-medium tracking-wide text-[#485C11]">
+          <p className="mb-[67px] font-mono text-sm font-medium tracking-wide text-verde-oliva">
             Benefits
           </p>
-          <h2 className="mb-6 font-serif text-5xl font-medium tracking-tight text-black md:text-6xl">
+          <h2 className="mb-[71px] font-serif text-5xl font-medium tracking-tight text-preto md:text-[64px] leading-[110%]">
             We've cracked the code.
           </h2>
-          <p className="text-lg text-[#929292]">
+          <p className="text-lg text-cinza-escuro">
             Area provides real insights, without the data overload.
           </p>
         </div>
 
-        {/* Grid de Features Responsivo */}
-        <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
+        {/* grid de features */}
+         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="border-t border-[#E9E9E9] pt-6">
+            <div key={index} className="border-t border-cinza-claro pt-6">
               <div className="mb-6">
-                {feature.icon}
+                <img 
+                  src={feature.icon} 
+                  alt={feature.title}
+                  className="h-6 w-6"  
+                />
               </div>
-              <h3 className="mb-4 font-serif text-xl font-medium text-black">
+              <h3 className="mb-4 font-serif text-xl font-medium text-preto">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed text-[#929292]">
+              <p className="text-sm leading-relaxed text-cinza-escuro">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Imagem inferior com bordas arredondadas */}
-        <div className="mt-24 w-full overflow-hidden rounded-[40px] bg-zinc-100 shadow-lg">
+        {/* imagem da montanha  */}
+        <div className="mt-24 w-full overflow-hidden rounded-[40px] bg-branco">
           <img
             src={MontanhaBarro}
             alt="Landscape view showing growth"
