@@ -6,27 +6,26 @@ export function HeroSection() {
     //<section className="border-b border-zinc-200 px-6 pb-20 pt-28">
     //md >768px lg xl 2xl 1024 1280 1536
      
-     <section className="relative flex flex-col items-center pt-16 md:pt-24 pb-0 overflow-hidden">
+     <section className="relative flex flex-col items-center pt-16 md:pt-24 pb-12 overflow-hidden bg-branco">
        
-        <h1
-          className="mb-16 max-w-5xl text-center text-6xl md:text-[8rem] font-serif leading-nome tracking-tight text-preto">
+        <h1 className="mb-12 md:mb-20 max-w-5xl text-center text-5xl md:text-[7.5rem] font-serif leading-none tracking-tight text-preto">
           Browse everything.
         </h1>
 
-        <div className="relative w-full  px-4 md:px-8 max-w-[1400px]">
-            <div className="absolute bottom-0 left-4 right-4 md:left-8 md:right-8 h-[60%] rounded-t-[40px] bg-cinza-oliva">
+        <div className="relative w-full max-w-[1200px] h-[240px] md:h-[520px] overflow-hidden px-4 md:px-0 ">
+            <div className="absolute bottom-0 w-full h-[220px] md:h-[362px] rounded-[20px] md:rounded-[30px] bg-cinza-oliva z-0">
             </div>
-            <div className="relative z-10 mx-auto flex w-full max-w-5xl justify-center">
+            <div className="relative z-10 flex justify-center items-end w-full">
               <img
                  src={Ipad}
                  alt="Hero desktop"
-                 className="hidden w-full object-contain
-                  drop-shadow-2xl md:block"/>
+                 className="hidden md:block w-full max-w-[907px]
+                  h-auto rounded-[24px] drop-shadow-2xl object-contain"/>
 
-              <img
+               <img
                  src={Iphone}
                  alt="Hero mobile"
-                 className="block w-full object-contain 
+                 className="block w-full object-contain
                  drop-shadow-2xl md:hidden"/>
         </div>
       </div>

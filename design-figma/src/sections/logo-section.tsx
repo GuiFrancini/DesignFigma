@@ -9,20 +9,20 @@ export function LogoSection() {
   const logos = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
 
   return (
-    <section className="w-full bg-white px-6 pt-16 pb-8">
+    <section className="w-full bg-branco px-6 pt-16 pb-8">
       <div className="mx-auto max-w-7xl">
        
-        <p className="mb-10 text-sm font-normal text-[#929292]">
+        <p className="mb-10 text-sm font-normal text-cinza-escuro">
           Trusted by:
         </p>
 
-        <div className="border-b border-[#E9E9E9] pb-16">
+        <div className="border-b border-cinza-claro pb-16">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
           gap-8 items-center justify-items-center">
             
             {logos.map((logo, index) => (
               <div key={index} 
-              className="flex h-12 items-center justify-center bg-white">
+              className="flex h-12 items-center justify-center bg-branco">
                 <img
                   src={logo}
                   alt={`Logo partner ${index + 1}`}
